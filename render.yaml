@@ -1,0 +1,16 @@
+# Render 部署配置（静态站点）
+# 在 Render 后台 New > Static Site > 连接 GitHub 仓库后会自动读取本文件。
+services:
+  - type: web
+    name: adhd-self-assessment
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: "."
+    pullRequestPreviewsEnabled: true
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: no-referrer
