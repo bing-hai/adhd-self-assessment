@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ADHD 成人注意力自评问卷 · ASRS v1.1</title>
+  <meta name="description" content="基于 WHO 成人 ADHD 自评量表（ASRS v1.1）的网页版筛查工具，18 题，即时出结果。仅供自我筛查参考，非医学诊断。" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="badge">ASRS v1.1 · WHO 官方量表</div>
+      <h1>成人 ADHD 注意力自评问卷</h1>
+      <p class="sub">
+        基于世界卫生组织（WHO）与哈佛医学院联合开发的
+        <strong>成人 ADHD 自评量表（Adult ADHD Self-Report Scale, v1.1）</strong>。
+        共 18 题，约 3 分钟完成，提交后即时给出筛查结果。
+      </p>
+      <div class="disclaimer">
+        ⚠️ 本问卷为<strong>自我筛查工具</strong>，不能替代专业医学诊断。
+        结果仅提示你是否存在需要进一步关注的注意力/多动倾向，
+        最终诊断请前往正规医院精神科或心理科就诊。
+      </div>
+    </header>
+
+    <div id="progress" class="progress" hidden>
+      <div class="progress-bar"><span id="progress-fill"></span></div>
+      <div class="progress-text"><span id="progress-num">0</span> / 18 题已作答</div>
+    </div>
+
+    <form id="quiz" class="quiz"></form>
+
+    <div class="actions">
+      <button id="submit" class="btn-primary" disabled>计算我的结果</button>
+      <button id="reset" class="btn-ghost" type="button" hidden>重新测评</button>
+    </div>
+
+    <section id="result" class="result" hidden></section>
+
+    <footer class="foot">
+      <p>
+        量表来源：Kessler et al., <em>Psychological Medicine</em> (2005)，Adult ADHD Self-Report Scale (ASRS v1.1)。
+        本页面为开源复刻，仅供教育与自我觉察用途。
+      </p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
